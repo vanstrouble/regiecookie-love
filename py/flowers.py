@@ -1,34 +1,34 @@
-from turtle import *
-from colorsys import *
+import turtle
+from colorsys import hsv_to_rgb
 
-# bgcolor("black")
-# tracer(2)
-# pensize(2)
-# h = 0
-
-# for i in range(195):
-#     color = colorsys.hsv_to_rgb(h, 0.9, 1)
-#     h += 0.006
-#     pencolor(color)
-#     lt(179)
-#     backward(i * 0.1)
-#     circle(i * 0.3, 120)
-#     rt(14)
-#     forward(i * 0.1)
-#     circle(i * 0.3, 120)
-
-# done()
-
-
-bgcolor("black")
-speed(0)
+# First flower style
+turtle.bgcolor("black")
+turtle.tracer(2)
+turtle.pensize(2)
 h = 0
 
-for i in range(371):
-    c = hsv_to_rgb(h, 1, 1)
-    h += 0.005
-    color(c)
-    circle(-i * 0.68, 200)
-    right(80)
+for i in range(195):
+    color = hsv_to_rgb(h, 0.9, 1)
+    h += 0.006
+    turtle.pencolor(color)
+    turtle.lt(179)
+    turtle.backward(i * 0.1)
+    turtle.circle(i * 0.3, 120)
+    turtle.rt(14)
+    turtle.forward(i * 0.1)
+    turtle.circle(i * 0.3, 120)
 
-done()
+
+# Secod flower style
+# turtle.bgcolor("black")
+# turtle.speed(0)
+# hue = 0
+
+# for i in range(371):
+#     col = hsv_to_rgb(hue, 1, 1)
+#     hue += 0.005
+#     turtle.color(col)
+#     turtle.circle(-i * 0.68, 200)
+#     turtle.right(80)
+
+turtle.done()
